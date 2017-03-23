@@ -307,7 +307,6 @@ router.like = function (req, res) {
 router.getToday = function (req, res) {
   var end = new Date().getTime()
   var mSecond = 24 * 3600 * 1000
-  // var days = end%mSecond
   var start = end - end % mSecond
   console.log(start)
   console.log(end)
@@ -321,9 +320,6 @@ router.getToday = function (req, res) {
 router.getWeekend = function (req, res) {
   var end = new Date().getTime()
   var mSecond = 24 * 3600 * 1000 * 7
-  // var day = new Date().getDay()
-  // var days = Math.round(end/mSecond)
-  // var start = (days-day)*mSecond
   var start = end - end % mSecond
   console.log(start)
   trend.find({ created: { $gte: start, $lte: end } }, function (err, docs) {

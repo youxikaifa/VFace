@@ -1,4 +1,5 @@
 var connectDB = function (mongoose) {
+    
     mongoose.connect('mongodb://localhost/VFace')
     // 实例化连接对象
     const db = mongoose.connection
