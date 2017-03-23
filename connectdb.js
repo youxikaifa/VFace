@@ -1,5 +1,5 @@
 var connectDB = function (mongoose) {
-    mongoose.connect('mongodb://localhost/VFace')
+    mongoose.connect('mongodb://192.168.1.104/VFace')
     // 实例化连接对象
     const db = mongoose.connection
     db.on('error', console.error.bind(console, '连接错误：'))

@@ -47,6 +47,9 @@ app.get('/getWeekend',index.getWeekend)
 app.get('/getMonth',index.getMonth)
 app.get('/getMyTrend',index.getMyTrend)
 app.post('/commitFeedback',index.commitFeedback)
+app.post('/uploadVersion',index.uploadVersion)
+app.get('/getVersion',index.getVersion)
+app.post('/checkUser',index.checkUser)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

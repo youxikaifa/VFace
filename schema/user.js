@@ -6,10 +6,10 @@ var hat = require('hat')
 
 // 创建schema
 const user = new mongoose.Schema({
-    name: String,
-    account:String,
+    name: {type:String,default:""},
+    account:{type:String,default:""},
     password:{type:String,default:""},
-    avatar:String,
+    avatar:{type:String,default:""},
     token:{type:String,default:hat.rack()},
     gender:{type:Number,default:0},
     motto:{type:String,default:'暂无心情'},
